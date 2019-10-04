@@ -75,7 +75,7 @@ commands:
       - run:
           name: Upload Coverage Results
           command: |
-            curl --request POST --retry 12 --max-time 10 --retry-delay 0 --retry-max-time 180 --silent --show-error --fail \ 
+            curl --request POST --retry 12 --max-time 10 --retry-delay 0 --retry-max-time 180 --silent --show-error --fail \
             --data-binary @<< parameters.path >> \
             "https://codecov.io/upload/v2?service=circleci\
             &token=<< parameters.token >>\
